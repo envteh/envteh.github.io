@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logoAbout from "../../assets/images/about.jpeg";
+import logoAbout from "../../assets/images/about.webp";
 import { Counter } from "../ui/Counter";
 import { Section } from "../ui/Section";
 import { Container } from "../ui/Container";
