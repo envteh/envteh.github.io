@@ -23,8 +23,8 @@ const itemVariants = {
 export default function Hero() {
   return (
     <Section id="#hero" className="pt-26 lg:min-h-screen">
-      <div className="bg-brand-orange/20 absolute top-1/4 -left-20 -z-10 h-72 w-72 animate-pulse rounded-full blur-3xl" />
-      <div className="bg-brand-magenta/10 absolute -right-20 bottom-1/4 -z-10 h-96 w-96 animate-pulse rounded-full blur-3xl delay-700" />
+      <div className="bg-brand-orange/20 absolute top-1/4 -left-20 -z-10 h-72 w-72 animate-[pulse_6s_ease-in-out_infinite] rounded-full blur-xl" />
+      <div className="bg-brand-magenta/10 absolute -right-20 bottom-1/4 -z-10 h-96 w-96 animate-[pulse_6s_ease-in-out_infinite] rounded-full blur-xl delay-700" />
 
       <Container className="grid-cols-1 gap-9 sm:gap-12 lg:mb-0 lg:grid-cols-2">
         <motion.div
@@ -65,8 +65,7 @@ export default function Hero() {
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
+          animate="show"
           className="flex items-start justify-evenly lg:order-last lg:col-span-2 lg:mt-8"
         >
           {heroTrust.map((item, i) => {
@@ -91,9 +90,18 @@ export default function Hero() {
           })}
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.6,
+            delay: 0.2,
+          }}
           className="relative h-fit lg:flex lg:justify-end"
         >
           <div className="from-brand-orange to-brand-magenta animate-float h-fit rotate-3 rounded-3xl bg-linear-to-br p-1 shadow-2xl lg:mt-4 lg:w-[90%]">
@@ -102,6 +110,8 @@ export default function Hero() {
             >
               <img
                 src={imageHero}
+                loading="eager"
+                decoding="async"
                 alt="Software Development"
                 className="h-auto w-full rounded-xl grayscale-0 transition-all duration-300 hover:grayscale"
               />
@@ -111,7 +121,7 @@ export default function Hero() {
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1 }}
+            transition={{ delay: 0.7 }}
             className={`dark:bg-brand-charcoal bg-brand-light-gray animate-float dark:border-brand-orange/30 absolute bottom-0 left-1 rounded-2xl border border-gray-100 p-2 shadow-xl sm:-bottom-8 sm:left-10 sm:p-4`}
           >
             <div className="flex items-center gap-3">
