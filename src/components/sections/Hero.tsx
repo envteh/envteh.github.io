@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "../ui/Button";
 import { heroTrust } from "../../data/DataHome";
-import imageHero from "../../assets/images/hero.jpeg";
+import imageHero from "../../assets/images/hero.webp";
 import { Container } from "../ui/Container";
 import { Section } from "../ui/Section";
 
