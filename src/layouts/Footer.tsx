@@ -71,9 +71,9 @@ export function Footer() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
           >
-            <h4 className="text-brand-charcoal mb-4 text-xl font-bold dark:text-white">
+            <h2 className="text-brand-charcoal mb-4 text-xl font-bold dark:text-white">
               Tautan Cepat
-            </h4>
+            </h2>
             <ul className="space-y-2 text-gray-600 dark:text-gray-400">
               <li>
                 <a
@@ -116,9 +116,9 @@ export function Footer() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
           >
-            <h4 className="text-brand-charcoal mb-4 text-xl font-bold dark:text-white">
+            <h2 className="text-brand-charcoal mb-4 text-xl font-bold dark:text-white">
               Contact
-            </h4>
+            </h2>
             <ul className="space-y-2 text-gray-600 dark:text-gray-400">
               <li>
                 <a
@@ -164,9 +164,9 @@ export function Footer() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
           >
-            <h4 className="text-brand-charcoal mb-4 text-xl font-bold dark:text-white">
+            <h2 className="text-brand-charcoal mb-4 text-xl font-bold dark:text-white">
               Jam Operasional
-            </h4>
+            </h2>
             <ul className="space-y-4 text-gray-600 dark:text-gray-400">
               <li>
                 <a

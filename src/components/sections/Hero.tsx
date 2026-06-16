@@ -104,7 +104,7 @@ export default function Hero() {
           }}
           className="relative h-fit lg:flex lg:justify-end"
         >
-          <div className="from-brand-orange to-brand-magenta animate-float h-fit rotate-3 rounded-3xl bg-linear-to-br p-1 shadow-2xl lg:mt-4 lg:w-[90%]">
+          <div className="from-brand-orange to-brand-magenta sm:animate-float h-fit rotate-3 rounded-3xl bg-linear-to-br p-1 shadow-2xl lg:mt-4 lg:w-[90%]">
             <div
               className={`bg-brand-charcoal dark:bg-brand-light-gray -rotate-3 overflow-hidden rounded-[22px] p-4`}
             >
@@ -113,7 +113,7 @@ export default function Hero() {
                 loading="eager"
                 decoding="async"
                 alt="Software Development"
-                className="h-auto w-full rounded-xl grayscale-0 transition-all duration-300 hover:grayscale"
+                className="rounded-xl object-cover grayscale-0 transition-all duration-300 hover:grayscale max-sm:aspect-4/3 sm:h-auto sm:w-full"
               />
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function Hero() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.7 }}
-            className={`dark:bg-brand-charcoal bg-brand-light-gray animate-float dark:border-brand-orange/30 absolute bottom-0 left-1 rounded-2xl border border-gray-100 p-2 shadow-xl sm:-bottom-8 sm:left-10 sm:p-4`}
+            className={`dark:bg-brand-charcoal bg-brand-light-gray sm:animate-float dark:border-brand-orange/30 absolute bottom-0 left-1 rounded-2xl border border-gray-100 p-2 shadow-xl sm:-bottom-8 sm:left-10 sm:p-4`}
           >
             <div className="flex items-center gap-3">
               <div

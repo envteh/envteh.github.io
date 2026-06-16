@@ -20,7 +20,10 @@ export function ThemeSelector({ isScroll }: { isScroll: boolean }) {
   return (
     <Listbox value={mode} onChange={setTheme}>
       <div className="relative">
-        <ListboxButton className="flex cursor-pointer items-center justify-center rounded-full p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800">
+        <ListboxButton
+          aria-label="Mode Light / Dark / System"
+          className="flex cursor-pointer items-center justify-center rounded-full p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+        >
           {current.icon}
         </ListboxButton>
 

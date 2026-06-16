@@ -31,7 +31,7 @@ export function Navbar() {
             <img
               src="/env.webp"
               alt="Logo Environment Technology"
-              className="h-10 md:mr-2 md:h-12"
+              className="h-10 w-10 object-contain md:mr-2 md:h-12 md:w-12"
             />
             <span className="text-black dark:text-white">ENV</span>
             <span className="from-brand-orange to-brand-magenta bg-linear-to-r bg-clip-text text-transparent">
