@@ -66,7 +66,10 @@ export function Navbar() {
           {/* Mobile Toggle */}
           <div className="flex items-center gap-4 md:hidden">
             <ThemeSelector isScroll={isScrolled} />{" "}
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle Navbar"
+            >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>

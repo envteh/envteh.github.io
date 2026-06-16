@@ -144,7 +144,9 @@ export default function Hero() {
               </div>
               <div>
                 <p className="text-lg font-bold sm:text-2xl">99%</p>
-                <p className="text-xs text-gray-400">Client Satisfaction</p>
+                <p className="text-xs text-gray-700 dark:text-gray-300">
+                  Client Satisfaction
+                </p>
               </div>
             </div>
           </motion.div>
