@@ -6,13 +6,14 @@ import { Container } from "../ui/Container";
 export default function Services() {
   return (
     <Section
+      id="services"
       className={`dark:bg-brand-charcoal text-brand-charcoal dark:text-white`}
     >
       {/* Decorative gradient */}
       <div className="bg-brand-magenta/5 absolute top-16 right-0 h-1/2 w-1/2 rounded-full blur-3xl" />
       <div className="bg-brand-orange/5 absolute bottom-16 left-0 h-1/2 w-1/2 rounded-full blur-3xl" />
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:mt-4">
         <div className="mb-16 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

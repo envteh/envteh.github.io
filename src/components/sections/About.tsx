@@ -49,7 +49,7 @@ export default function About() {
           <p
             className={`mb-8 text-lg leading-relaxed text-gray-600 dark:text-gray-300`}
           >
-            Misi kami sederhana: membantu bisnis berkembang melalui solusi
+            Misi kami sederhana yaitu membantu bisnis berkembang melalui solusi
             digital yang tepat, efektif, dan relevan.
           </p>
           <div className="grid grid-cols-2 gap-8">

@@ -51,7 +51,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="#services"
+            href="#packet"
             className="rounded-lg border-2 border-white bg-transparent px-6 py-3 text-center font-semibold text-white transition-all duration-300 ease-in-out hover:bg-white/10 active:scale-95"
           >
             Mulai Sekarang

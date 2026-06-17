@@ -28,8 +28,8 @@ export default function Hero() {
 
       <Container className="grid-cols-1 gap-9 sm:gap-12 lg:mb-0 lg:grid-cols-2">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           className="flex h-full flex-col justify-center"
         >
@@ -55,7 +55,7 @@ export default function Hero() {
               </span>
             </Button>
             <Button
-              href="#solution"
+              href="#services"
               className={`text-brand-charcoal border-brand-charcoal border-2 px-2 py-3 font-bold md:px-8 md:text-lg dark:border-white dark:text-white`}
             >
               Lihat Layanan{" "}

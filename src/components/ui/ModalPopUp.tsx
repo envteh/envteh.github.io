@@ -32,9 +32,9 @@ export function ModalPopUp({ project, onClose }: ModalPopUpProps) {
       onClick={onClose}
     >
       <motion.div
-        initial={{ opacity: 0, scale: 0.95, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.95, y: 20 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
         transition={{ type: "spring", duration: 0.5 }}
         className="relative flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-3xl border border-black/10 bg-white text-gray-900 shadow-2xl dark:border-white/10 dark:bg-[#18181b] dark:text-white"
         onClick={(e) => e.stopPropagation()}
@@ -44,7 +44,7 @@ export function ModalPopUp({ project, onClose }: ModalPopUpProps) {
           onClick={onClose}
           className="absolute top-6 right-6 z-30 rounded-full bg-black/40 p-2 text-white backdrop-blur-md transition-colors hover:bg-black/60 dark:bg-black/50 dark:text-white dark:hover:bg-black/70"
         >
-          <X size={20} />
+          <X size={20} className="cursor-pointer" />
         </button>
 
         {/* Modal Content - Scrollable */}

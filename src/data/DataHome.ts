@@ -166,7 +166,9 @@ export const pricingPlans: PricingPlans[] = [
   },
 ];
 
-type ProjectCategory = "Web" | "Mobile" | "Desktop";
+type ProjectCategory = "Web" | "Mobile" | "UI/UX";
+
+export const projectCategories: ProjectCategory[] = ["Web", "Mobile", "UI/UX"];
 
 export interface Project {
   title: string;

@@ -6,6 +6,7 @@ import { Container } from "../ui/Container";
 import { type Project, projects } from "../../data/DataHome";
 import { ModalPopUp } from "../ui/ModalPopUp";
 import { useLockBodyScroll } from "../../hooks/useLockBodyScroll";
+import { Link } from "react-router-dom";
 
 export default function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -27,9 +28,15 @@ export default function Portfolio() {
               kami ciptakan di dalam portofolio kami.
             </p>
           </div>
-          <button className="text-brand-magenta flex cursor-pointer items-center gap-2 font-bold transition-transform hover:translate-x-2 active:translate-x-2">
-            Lihat Semua Projek <span>→</span>
-          </button>
+          <Link
+            to={"/projects"}
+            className="group text-brand-magenta flex cursor-pointer items-center gap-2 font-bold max-lg:text-nowrap"
+          >
+            Lihat Semua Projek{" "}
+            <span className="transition-transform duration-400 group-hover:translate-x-2 group-active:translate-x-2">
+              →
+            </span>
+          </Link>
         </div>
 
         <div className="grid gap-10 md:grid-cols-2">

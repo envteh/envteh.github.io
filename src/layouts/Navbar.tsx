@@ -6,16 +6,27 @@ import { useScrollPosition } from "../hooks/useScrollPosition";
 import { useMemo, useState } from "react";
 import { ThemeSelector } from "../components/ui/ThemeSelector";
 import { useActiveStatic } from "../hooks/useActiveStatic";
+import { useSmartNavigate } from "../hooks/useSmartNavigate";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isScrolled = useScrollPosition();
+  const { goToSection, goHome } = useSmartNavigate();
 
   const sectionIds = useMemo(() => {
     return navLinks.map((val) => val.href.replace("#", ""));
   }, []);
 
   const activeLink = useActiveStatic(sectionIds);
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
+    e.preventDefault();
+    goToSection(href);
+  };
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    goHome();
+  };
 
   return (
     <>
@@ -27,7 +38,11 @@ export function Navbar() {
         } dark:bg-brand-charcoal/70 bg-brand-light-gray/70 text-black dark:text-white`}
       >
         <div className="container mx-auto flex items-center justify-between px-6">
-          <a href="#" className="flex items-center text-2xl font-bold">
+          <a
+            href="/"
+            onClick={(e) => handleLogoClick(e)}
+            className="flex items-center text-2xl font-bold"
+          >
             <img
               src="/env.webp"
               alt="Logo Environment Technology"
@@ -45,6 +60,7 @@ export function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className={`font-medium transition-colors duration-500 ${
                   activeLink === link.href.slice(1)
                     ? "text-brand-orange"
@@ -56,7 +72,8 @@ export function Navbar() {
             ))}
             <ThemeSelector isScroll={isScrolled} />{" "}
             <Button
-              href="#services"
+              href="#packet"
+              onClick={(e) => handleNavClick(e, "#packet")}
               className="from-brand-orange to-brand-magenta bg-linear-to-r px-8 py-2 font-semibold text-white sm:text-lg lg:px-14"
             >
               Mulai
@@ -89,7 +106,10 @@ export function Navbar() {
                   <a
                     key={link.name}
                     href={link.href}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={(e) => {
+                      handleNavClick(e, link.href);
+                      setIsMenuOpen(false);
+                    }}
                     className={`font-medium transition-colors duration-500 ${
                       activeLink === link.href.slice(1)
                         ? "text-brand-orange"
